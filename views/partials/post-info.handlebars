@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <a href="/post/{{id}}" class="card-title" target="_blank">{{title}}</a>
+        <p>
+          {{post_text}}
+        </p>
+        <p>by
+          {{user.username}}
+          on
+          {{format_date created_at}}
+        </p>
+        <a href="/post/{{id}}">{{comments.length}}
+          {{format_plural "comment" comments.length}}</a>
+      </div>
+    </div>
+  </div>
+</div>

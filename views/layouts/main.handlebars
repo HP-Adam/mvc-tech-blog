@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="teal lighten-2" style="padding-left: 3%;">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">Tech Blog</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                {{#if loggedIn}}
+                    <li><a href="/dashboard">dashboard</a></li>
+                    <li id="logout" class="btn-no-style"><a>logout</a></li>
+                {{else}}
+                    <li><a href="/login">login</a></li>
+                {{/if}}
+            </ul>
+        </div>
+  </nav>
+    <main style="margin: 3%;">
+      {{{ body }}}
+    </main>
+
+  </div>
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
+</body>
+
+</html>
